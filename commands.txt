@@ -1,0 +1,8 @@
+
+npx react-create-app app-name
+npm i react-router-dom
+npm i saas
+npm i --save @fortawesome/fontawesome-svg-core
+npm install --save @fortawesome/free-solid-svg-icons
+npm install --save @fortawesome/react-fontawesome
+npm install --save @fortawesome/free-brands-svg-icons

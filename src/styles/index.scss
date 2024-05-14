@@ -1,0 +1,156 @@
+
+@import "partials/animation.scss";
+@import "partials/navbar.scss";
+@import "partials/hero-section.scss";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background-color: #fff;
+    --backgroud-light: #fff;
+    --shadow-color: rgba(0,0,0,0.2);
+    --primary-color: rgb(255,0,86);
+    --text-color: #000000;
+    --text-light: #575757;
+    --font-size: 16px;
+    --animation-speed:1;
+}
+a{
+    text-decoration: none;
+}
+img{
+    object-fit: cover;
+
+}
+body{
+    font-size: var(--font-size);
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: .75em 1em;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    box-shadow: 0 3px 9px var(--shadow-color);
+    font-weight: bold;
+    &:hover{
+        box-shadow: 0 1px 3px var(--shadow-color);
+    }
+}
+
+
+.main{
+    padding-block: 3vh;
+}
+.section{
+    display: flex;
+    align-items: center;
+    margin-bottom: 3em;
+    .title{
+        color: var(--text-color);
+        font-size: 3em;
+        margin-bottom: .25em;
+    }
+    .info{
+        color: var(--text-light);
+        font-size: 1em;
+        margin-bottom: 1.25em;
+        line-height: 1.3em;
+        letter-spacing: 1px;
+    }
+    .col{
+        width: 50%;
+    }
+}
+.container
+{
+    padding-inline: 15vw;  
+}
+
+
+@media screen and (max-width:768px){
+    .navbar{
+        .nav-links{
+            display: none;
+        }
+        .sidebar-btn{
+            display: block;
+        }
+    }
+}
+    
+
+
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+
+  .section.improve-skills{
+    .col.img{
+        img{
+            width: 100%;
+        }
+    }
+    .col.typography{
+        padding-left: 1em;
+        .skill-item{
+            border-left: .2em solid var(--primary-color);
+            margin-bottom: .5em;
+            padding:.2em 0 .1em .5em;
+            color: var(--text-light);
+            font-weight: bold;
+            transform: translateX(100%);
+            opacity: 0;
+            animation: getAnimationDuration(.3s) slideInRight forwards;
+            @for $i from 1 through 7{
+                &:nth-child(#{$i})
+                {
+                    $duration: $i * 0.1s;
+                    animation-delay: $duration;
+                }
+            }
+        }
+        .btn{
+            margin-top: .75em;
+        }
+    }
+  }
+
