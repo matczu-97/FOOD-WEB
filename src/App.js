@@ -2,6 +2,7 @@
 import NavBar from "./components/NavBar";
 import HeroSection from "./components/HeroSection";
 import ImproveSkills from "./components/ImproveSkills";
+import QuoteSection from "./components/QuoteSectio";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
      <div className="container main">
       <HeroSection/>
       <ImproveSkills/>
+      <QuoteSection/>
      </div>
      
     </div>
