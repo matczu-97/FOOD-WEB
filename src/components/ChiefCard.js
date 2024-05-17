@@ -10,11 +10,11 @@ export default function ChiefCard({chief})
             <h3 className="chief-card-name">{chief.name}</h3>
             <p className="chief-recipe-count">Recipes: <b>{chief.recipesCount}</b></p>
             <p className="chief-cuisine">Cuisine: <b>{chief.cuisine}</b></p>
-            <p className="chief-icons">
-                <FontAwesomeIcon icon={faFacebook}/> 
-                <FontAwesomeIcon icon={faTwitter}/>
-                <FontAwesomeIcon icon={faInstagram}/>
-            </p>
+            <div className="chief-icons">
+                <a href="https://www.facebook.com/"><FontAwesomeIcon icon={faFacebook}/> </a>
+                <a href="https://www.twitter.com/"><FontAwesomeIcon icon={faTwitter}/></a>
+                <a href="https://www.instagram.com/"><FontAwesomeIcon icon={faInstagram}/></a>
+            </div>
         </div>
     </div>
     )
