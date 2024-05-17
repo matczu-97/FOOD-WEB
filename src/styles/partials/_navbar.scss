@@ -5,6 +5,10 @@
 
 .navbar{
     height: 55px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 998;
     box-shadow: 0 3px 6px var(--shadow-color);
     background-color: var(--background-color);
     color: var(--text-color);
@@ -54,6 +58,7 @@
         width: 35px;
         position: relative;
         display: none;
+
         .bar{
             border-radius: 5px;
             height: 6px;
@@ -102,6 +107,7 @@
 
 .sidebar{
     position: fixed;
+    z-index: 999;
     top: 0;
     left: 0;
     height: 100vh;
