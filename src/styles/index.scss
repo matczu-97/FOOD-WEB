@@ -1,10 +1,6 @@
-
 @import "partials/animation.scss";
 @import "partials/navbar.scss";
-@import "partials/hero-section.scss";
-@import "partials/improve-section.scss";
-@import "partials/quote-section.scss";
-@import "partials/chief-section.scss";
+
 *{
     margin: 0;
     padding: 0;
@@ -181,40 +177,58 @@ body{
     font-weight: 900;
     font-style: normal;
   }
-  
+
+@import "partials/hero-section.scss";
+@import "partials/improve-section.scss";
+@import "partials/quote-section.scss";
+@import "partials/chief-section.scss";
+@import "partials/footer.scss";
+@import "partials/previous-searches";
 
 
-.footer{
-    background-color: #0f0f0f;
-    color: white;
-    padding-block:1em;
+.recipes-container {
     display: grid;
-    grid-template-columns:2fr 1fr 1fr;
-    grid-gap:1em;
-    .footer-section{
-    .links{
-        display: grid;
-        grid-template-columns: 1fr;
-        a{
-            opacity: .9;
-            margin-bottom: .5em;
-            color: #fff;
-            &:hover{
-                color: var(--primary-color);
-                font-size: larger;
-            }
-        }
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    grid-gap: 1.5em;
+}
+
+.recipe-card{
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    .recipe-card-info{
+        padding: 15px;
     }
-    p{
-        opacity: .9;
-        margin-bottom: .5em;
+    .custom-image{
+        z-index: -1;
     }
-    p.title{
-        opacity: 1;
+    .author-img{
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: 3px solid var(--backgroud-light);
+        box-shadow: 0 1px 3px var(--shadow-color);
+        margin-top: -50px;
+        z-index: 2;
+    }
+    .recipe-title{
+        font-size: 1.2em;
         font-weight: bold;
-        margin-bottom: 1em;
-        font-size: 1.1em;
+        margin-bottom: .5em;
+        color: var(--text-color);
+        margin-top: .25em;
     }
-    
+    .recipe-desc{
+        color: var(--text-light);
+        font-size: .9em;
+        letter-spacing: 1px;
+    }
+    .view-btn{
+       font-size: 1em;
+       font-weight: bold;
+       color: var(--primary-color);
+       margin-top: .75em;
+       display: inline-block;
     }
 }
+
