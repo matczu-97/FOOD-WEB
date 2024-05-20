@@ -89,6 +89,9 @@ export default function PreviousSearches()
               <button onClick={handleBtnClick} className="btn">
                 <FontAwesomeIcon icon={faSearch} />
               </button>
+              <button onClick={handleBtnClearSearch} className="btn clear-search">
+                <FontAwesomeIcon icon={faX} />
+              </button>
             </div>
           </div>
         </div>
